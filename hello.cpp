@@ -21,7 +21,7 @@ int main() {
     for (int i = 0; i < 1000; ++i) {
         aDerecha[i] += aIzquierda[i];
         // imprimir el resultado de la suma en cada nodo y el número de hilo    
-        std::cout << " - Suma en índice " << i << ": " << aDerecha[i] << std::endl;
+        std::cout << "Hilo " << omp_get_thread_num() << " - Suma en índice " << i << ": " << aDerecha[i] << std::endl;
     }
 
     return 0;
